@@ -5,19 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodingDojo2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="525" Background="Black">
+        Title="MainWindow" Height="500" Width="500" Background="Black">
     <Grid ShowGridLines="True" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="100"/>
-        </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" Margin="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" >
+        </Grid.ColumnDefinitions> 
+        <Grid Grid.Column="0" Margin="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" ShowGridLines="True">
             <Grid.RowDefinitions>
-                <RowDefinition Height="25"/>
+                <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBox Grid.Row="0" Text="Überlauf Grauwasser" VerticalAlignment="Center"  HorizontalAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Black"></TextBox>
-        </Grid>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image Source="Images/Warning-WF.png"></Image>
+                <TextBox  Text="Überlauf Grauwasser" VerticalAlignment="Center"  HorizontalAlignment="Center" VerticalContentAlignment="Center" Foreground="red" Background="Black" BorderBrush="{x:Null}"></TextBox>
+            </StackPanel>
+          </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
